@@ -9,11 +9,11 @@ template IsNegative() {
     signal input in;
     signal output out;
 
-    component num2Bits = Num2Bits(254);
+    component num2Bits = Num2Bits(256);
     num2Bits.in <== in;
     component sign = Sign();
     
-    for (var i = 0; i < 254; i++) {
+    for (var i = 0; i < 256; i++) {
         sign.in[i] <== num2Bits.out[i];
     }
 
@@ -24,11 +24,11 @@ template IsPositive() {
     signal input in;
     signal output out;
 
-    component num2Bits = Num2Bits(254);
+    component num2Bits = Num2Bits(256);
     num2Bits.in <== in;
     component sign = Sign();
     
-    for (var i = 0; i < 254; i++) {
+    for (var i = 0; i < 256; i++) {
         sign.in[i] <== num2Bits.out[i];
     }
 
@@ -60,7 +60,7 @@ template Max(n) {
 
     maxs[0] <== in[0];
     for(var i = 0; i < n; i++) {
-        gts[i] = GreaterThan(252); // changed to 252 (maximum) for better compatibility
+        gts[i] = GreaterThan(256); // changed to 252 (maximum) for better compatibility
         switchers[i+1] = Switcher();
 
         gts[i].in[1] <== maxs[i];

@@ -21,14 +21,15 @@ pragma circom 2.0.0;
 include "compconstant.circom";
 
 template Sign() {
-    signal input in[254];
+    signal input in[256];
     signal output sign;
 
-    component comp = CompConstant(10944121435919637611123202872628637544274182200208017171849102093287904247808);
+    // Vesta prime // 2
+    component comp = CompConstant(14474011154664524427946373126085988481681528240970823689839871374196681474048);
 
     var i;
 
-    for (i=0; i<254; i++) {
+    for (i=0; i<256; i++) {
         comp.in[i] <== in[i];
     }
 

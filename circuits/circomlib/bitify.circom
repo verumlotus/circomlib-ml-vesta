@@ -40,13 +40,13 @@ template Num2Bits(n) {
 
 template Num2Bits_strict() {
     signal input in;
-    signal output out[254];
+    signal output out[256];
 
     component aliasCheck = AliasCheck();
-    component n2b = Num2Bits(254);
+    component n2b = Num2Bits(256);
     in ==> n2b.in;
 
-    for (var i=0; i<254; i++) {
+    for (var i=0; i<256; i++) {
         n2b.out[i] ==> out[i];
         n2b.out[i] ==> aliasCheck.in[i];
     }
@@ -67,13 +67,13 @@ template Bits2Num(n) {
 }
 
 template Bits2Num_strict() {
-    signal input in[254];
+    signal input in[256];
     signal output out;
 
     component aliasCheck = AliasCheck();
-    component b2n = Bits2Num(254);
+    component b2n = Bits2Num(256);
 
-    for (var i=0; i<254; i++) {
+    for (var i=0; i<256; i++) {
         in[i] ==> b2n.in[i];
         in[i] ==> aliasCheck.in[i];
     }
