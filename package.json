@@ -1,7 +1,7 @@
 {
-  "name": "circomlib-ml",
+  "name": "circomlib-ml-vesta",
   "version": "1.4.4",
-  "description": "Circuits library for machine learning in circom",
+  "description": "Circuits library for machine learning in circom over the vesta curve",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -14,13 +14,16 @@
     "ethereum",
     "circuit",
     "circom",
-    "zksnark"
+    "zksnark",
+    "pasta curves",
+    "vesta",
+    "nova"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/socathie/circomlib-ml.git"
+    "url": "https://github.com/verumlotus/circomlib-ml-vesta"
   },
-  "author": "Cathie So, PhD",
+  "author": "Cathie So, verumlotus",
   "license": "GPL-3.0",
   "devDependencies": {
     "@types/node": "^18.11.9",
