@@ -1,4 +1,6 @@
-# Circom Circuits Library for Machine Learning
+# Circom Circuits Library for Machine Learning over the Vesta Curve Prime
+
+Circom circuits for ML, forked from [Socathie's repo](https://github.com/socathie/circomlib-ml). Designed for the Vesta Curve, but will work with BN-254 as long as all numbers are `< p // 2` where `p` is the BN-254 prime. 
 
 Run `npm run test` to test all `circomlib-ml` circuit templates.
 
